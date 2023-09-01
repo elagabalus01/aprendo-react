@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`prueba primer componetne Debe hacer match con el snapshot 1`] = `
+<div>
+  <h2>
+    Hola mundo cruel desde una funciòn
+  </h2>
+  <h1>
+    ESTE ES EL TITULO
+  </h1>
+  <p>
+    Hola mundo
+  </p>
+</div>
+`;

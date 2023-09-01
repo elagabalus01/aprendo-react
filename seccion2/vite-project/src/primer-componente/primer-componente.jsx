@@ -9,8 +9,8 @@ const prueba = ()=>'Hola mundo cruel desde una funciòn'
 function PrimerComponente({title, subtitle}){
     return (
         <>
-            <h1>{prueba()}</h1>
             <h1>{title}</h1>
+            <h2>{subtitle}</h2>
             <p>Hola mundo</p>
         </>
     )
