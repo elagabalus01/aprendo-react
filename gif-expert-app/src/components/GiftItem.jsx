@@ -1,4 +1,7 @@
-export const GiftItem = ({title, url})=>{
+import PropTypes from "prop-types";
+
+
+const GiftItem = ({title, url})=>{
 
     return (
         <>
@@ -11,3 +14,13 @@ export const GiftItem = ({title, url})=>{
         </>
     )
 }
+
+GiftItem.prototype = {
+    title: PropTypes.string.isRequired,
+    url: PropTypes.string.isRequired
+}
+
+export {
+    GiftItem
+};
+

@@ -1,8 +1,8 @@
 import {getGifts} from '../helpers/getGIfts.js'
 import {useEffect, useState} from "react";
 import {GiftItem} from "./GiftItem.jsx";
-import '../css/styles.css'
 import {useFetchHook} from "../hooks/UseFetchHook.js";
+import PropTypes from "prop-types";
 export const GifGrid = ({category})=>{
 
     const [counter, setCounter] = useState(10)
@@ -25,4 +25,8 @@ export const GifGrid = ({category})=>{
             <button onClick={()=> setCounter(counter + 1)} > +1</button>
         </>
     )
+}
+
+GifGrid.propTypes = {
+    category: PropTypes.string.isRequired
 }

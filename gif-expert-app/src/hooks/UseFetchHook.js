@@ -6,7 +6,7 @@ export const useFetchHook = (category) => {
     const [images, setImages] = useState([])
 
 
-    const [isLoading, setIsLoading] = useState(false)
+    const [isLoading, setIsLoading] = useState(true)
 
     useEffect(() => {
         setIsLoading(true)

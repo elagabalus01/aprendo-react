@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Prueba con propetypes Prueba 1`] = `
+<div>
+  <div
+    class="card"
+  >
+    <img
+      alt="titulo desde prueba"
+      src="www.google.com"
+    />
+    <p>
+      titulo desde prueba
+    </p>
+  </div>
+</div>
+`;
