@@ -10,10 +10,14 @@ import {FocusScreen} from "./components/FocusScreen.jsx";
 import {EjemploLayoutEffect} from "./components/EjemploLayoutEffect.jsx";
 import {Memorize} from "./components/Memorize.jsx";
 import {MemoHook} from "./components/MemoHook.jsx";
+import {CallbackHook} from "./components/CallbackHook.jsx";
+import {Padre} from "./components/07-tarea-memo/Padre.jsx";
+
+import './intro-reducer/introReducer.js'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <MemoHook></MemoHook>
+  //<React.StrictMode>
+    <Padre/>
 
-  </React.StrictMode>,
+  //</React.StrictMode>,
 )
