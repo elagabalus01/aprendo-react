@@ -14,10 +14,11 @@ import {CallbackHook} from "./components/CallbackHook.jsx";
 import {Padre} from "./components/07-tarea-memo/Padre.jsx";
 
 import './intro-reducer/introReducer.js'
+import {TodoApp} from "./intro-reducer/TodoApp.jsx";
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   //<React.StrictMode>
-    <Padre/>
+    <TodoApp/>
 
   //</React.StrictMode>,
 )

@@ -20,7 +20,7 @@ const todoReducer = (state = initialState, action) =>{
 }
 
 
-const todos = todoReducer()
+let todos = todoReducer()
 
 console.log(todos)
 
@@ -36,6 +36,6 @@ const addTodoAction = {
     ]
 }
 
-todos = todoReducer(addTodoAction, addTodoAction)
+todos = todoReducer(todos, addTodoAction)
 
 console.log(todos)
