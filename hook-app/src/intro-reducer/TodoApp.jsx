@@ -1,45 +1,67 @@
-import {useReducer} from "react";
+import {useEffect, useReducer} from "react";
 import {todoReducer} from "./todoReducer.js";
+import {TodoList} from "./TodoList.jsx";
+import {TodoForm} from "./TodoForm.jsx";
 
 export const TodoApp = ()=>{
 
 
     const initialState = [
-        {
-            id: new Date().getTime(),
-            description: "prueba1 ",
-            done: false
-        }
-
     ]
 
-    const [state, dispatch]= useReducer(todoReducer, initialState)
+
+    const init = ()=>{
+        return JSON.parse(localStorage.getItem('TODOS')) ||  []
+    }
+
+    const [state, dispatch]= useReducer(todoReducer, initialState, init)
+
+
+    useEffect(()=>{
+        console.log(state)
+        localStorage.setItem('TODOS', JSON.stringify(state))
+    }, [state])
+
+    const handleNewTodo = (newTodo)=>{
+        const action = {
+            type: "ADD",
+            payload: newTodo
+        }
+        dispatch(action)
+    }
+
+    let items = [
+        {
+            id: 1,
+            description: "todo1",
+            done: false
+        },
+        {
+            id: 2,
+            description: "todo1",
+            done: false
+        },
+        {
+            id: 3,
+            description: "todo1",
+            done: false
+        }
+    ]
 
     return (
         <>
-            <h1>Todo App</h1>
+            <h1>
+                Todo App: 10,
+                <small> restantes: 1</small>
+            </h1>
                 <hr/>
                 <div className="row">
-                    <div className="col-5">
-                        <ul>
-                            <li>item 1</li>
-                            <li>item 2</li>
-                            <li>item 3</li>
-
-                        </ul>
+                    <div className="col-7">
+                        <TodoList items={state}></TodoList>
                     </div>
 
-                <div className="col-9">
-                    <h4>Agregar TODO</h4>
-                    <input
-                        type="text"
-                        className = "form-control"
-                    />
-                    <button
-                    type="submit"
-                    className="btn btn-outline-primary mt-1">
-                        Agregar
-                    </button>
+                <div className="col-5">
+                    <TodoForm onFormSubmit={(item)=>{handleNewTodo(item)}}></TodoForm>
                 </div>
             </div>
 

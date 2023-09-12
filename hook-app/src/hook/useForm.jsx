@@ -1,14 +1,10 @@
 import {useState} from "react";
 
-export const useForm = (initialForm = {
-        username: 'elagabalus',
-        email: 'elagabalus@example.com',
-        password: 'x'
-    }) =>{
+export const useForm = (initialForm) =>{
 
     const [ formState, setFormState ]= useState(initialForm);
 
-    const {username, email, password} = formState
+    //const {username, email, password} = formState
 
     const onInputChange = ({target})=>{
         const {name, value} = target
@@ -17,7 +13,6 @@ export const useForm = (initialForm = {
                 [ name ]: value
             }
         )
-        console.log(username, email)
     }
 
     const onResetForm = ()=>{
