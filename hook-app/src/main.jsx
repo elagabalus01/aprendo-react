@@ -15,10 +15,15 @@ import {Padre} from "./components/07-tarea-memo/Padre.jsx";
 
 import './intro-reducer/introReducer.js'
 import {TodoApp} from "./intro-reducer/TodoApp.jsx";
+import {MainApp} from "./ejemploUseContext/MainApp.jsx";
+import {BrowserRouter} from "react-router-dom";
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   //<React.StrictMode>
-    <TodoApp/>
+    <BrowserRouter>
+        <MainApp/>
+    </BrowserRouter>
+
 
   //</React.StrictMode>,
 )
