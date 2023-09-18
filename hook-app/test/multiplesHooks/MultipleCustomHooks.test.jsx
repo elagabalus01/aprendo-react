@@ -3,11 +3,29 @@ import {render, screen} from "@testing-library/react";
 
 import 'whatwg-fetch'
 import {useFetch} from "../../src/hook/index.js";
-
+import {useCounter} from "../../src/hook/useCounter.js"
 
 jest.mock("../../src/hook/index.js")
 
+jest.mock("../../src/hook/useCounter.js")
+
+
 describe("pruebas en MultipleCustomHooks", ()=>{
+
+    const incrementMockFunction = jest.fn()
+
+
+    useCounter.mockReturnValue(
+            {
+                counter : 1,
+                increment: incrementMockFunction
+            }
+        )
+
+    beforeEach(()=>{
+        jest.clearAllMocks()
+    })
+
 
 
     test("debe mostrar el componente por defacto", ()=>{
@@ -38,6 +56,17 @@ describe("pruebas en MultipleCustomHooks", ()=>{
     })
 
     test("Mock", ()=>{
+
+        useFetch.mockReturnValue(
+            {
+                data: [{
+                    author: 'elagabalus',
+                    quote: "Hola mundo"
+                }],
+                isLoading: true,
+                hasError: null
+            }
+        )
 
         render(<MultipleCustomHooks></MultipleCustomHooks>)
 
