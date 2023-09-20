@@ -1,4 +1,4 @@
-import {UserContext} from "./context/UserContext.jsx";
+    import {UserContext} from "./context/UserContext.jsx";
 import {useContext} from "react";
 
 export const LoginPage = ()=>{
@@ -9,7 +9,7 @@ export const LoginPage = ()=>{
     return (
         <>
             <h1>Login page</h1>
-            <pre>
+            <pre aria-label="pre-label">
                 {JSON.stringify(user)}
             </pre>
 
