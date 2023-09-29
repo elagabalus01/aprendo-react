@@ -4,5 +4,11 @@
     "match-sorter": "^6.3.1",
     "react-router-dom": "^6.15.0",
     "sort-by": "^1.2.0"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.22.20",
+    "@babel/preset-react": "^7.22.15",
+    "@testing-library/react": "^14.0.0",
+    "@types/jest": "^29.5.5"
   }
 }

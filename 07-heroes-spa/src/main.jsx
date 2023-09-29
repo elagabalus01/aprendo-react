@@ -2,12 +2,15 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import {HeroesApp} from "./HeroesApp.jsx";
 import {BrowserRouter} from "react-router-dom";
+import {AuthProvider} from "./auth/index.js";
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  //<React.StrictMode>
+    //<React.StrictMode>
     <BrowserRouter>
-        <HeroesApp/>
+        <AuthProvider>
+            <HeroesApp/>
+        </AuthProvider>
     </BrowserRouter>
 
-  //</React.StrictMode>,
+    //</React.StrictMode>,
 )
