@@ -3,10 +3,13 @@ import ReactDOM from 'react-dom/client'
 import {JournalApp} from "./JournalApp.jsx";
 import {AppRouter} from "./router/AppRouter.jsx";
 import {BrowserRouter} from "react-router-dom";
+import {AppTheme} from "./theme/AppTheme.jsx";
 
 ReactDOM.createRoot(document.getElementById('root')).render(
     <BrowserRouter>
-        <JournalApp/>
+        <AppTheme>
+            <JournalApp/>
+        </AppTheme>
     </BrowserRouter>
 
 )

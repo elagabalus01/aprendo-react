@@ -1,10 +1,11 @@
 import {AppRouter} from "./router/AppRouter.jsx";
+import {Typography} from "@mui/material";
 
 export const JournalApp = ()=>{
 
     return (
         <>
-            <h1>Journal APP</h1>
+            <Typography component="h1">Journal APP</Typography>
             <AppRouter/>
         </>
     )
