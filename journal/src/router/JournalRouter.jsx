@@ -1,12 +1,11 @@
 import {Route, Routes} from "react-router-dom";
+import {JournalPage} from "../pages/JournalPage.jsx";
 
 export const JournalRouter = ()=>{
 
     return (
         <Routes>
-            <Route path="/journal" element={
-                <h1>JOURNAL </h1>
-            } ></Route>
+            <Route path="/journal" element={<JournalPage/>} ></Route>
         </Routes>
 
     )
